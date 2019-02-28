@@ -69,7 +69,7 @@ func (c *Client) BlockByHash(hash string, complete bool) (*rpcpb.BlockResponse, 
 }
 
 // BlockByNumber .
-func (c *ClienClient) BlockByNumber(number int64, complete bool) (*rpcpb.BlockResponse, error) {
+func (c *Client) BlockByNumber(number int64, complete bool) (*rpcpb.BlockResponse, error) {
 	return c.asc.GetBlockByNumber(context.Background(), &rpcpb.GetBlockByNumberRequest{
 		Number:   number,
 		Complete: complete,
